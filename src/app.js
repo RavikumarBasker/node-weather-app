@@ -8,7 +8,9 @@ const getGeoCode = require('./utils/get-coordinates.js')
 const getWeather = require('./utils/getWeather.js')
 
 const app = express()
-app.listen(3000, () => {
+const port = process.env.PORT;
+
+app.listen(port, () => {
     console.log(chalk.green.inverse('Localhost Started'))
 })
 
