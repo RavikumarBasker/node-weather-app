@@ -53,7 +53,7 @@ app.get('/weather', (req, res) => {
         else {
             getWeather.getWeather(latitude, longitude, (error, { forecast, timezone }) => {
                 if (error) message.response = 'Error is getting weather'
-                else message.response = 'The timezone is ' + timezone + ' and the forecast looks like ' + forecast
+                else message.response = 'The timezone area is ' + timezone + ' and the forecast looks like ' + forecast
                 console.log(message.response)
                 res.render('getweather', {
                     placeName,
